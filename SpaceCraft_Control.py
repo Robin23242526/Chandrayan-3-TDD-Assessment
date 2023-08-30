@@ -62,3 +62,24 @@ class chandrayaan3:
             elif self.direction == 'W':
                self.direction = 'S'
         self.data.append(self.direction)
+    
+    def turnRight(self):
+        if self.direction in ['U','D']:
+            if self.data[-2] == 'E':
+              self.direction = 'S'
+            elif self.data[-2] == 'N':
+               self.direction = 'E'
+            elif self.data[-2] == 'S':
+               self.direction = 'W'
+            elif self.data[-2] == 'W':
+                self.direction = 'N'
+        else:
+            if self.direction == 'N':
+                self.direction = 'E'
+            elif self.direction == 'S':
+                self.direction = 'W'
+            elif self.direction == 'E':
+               self.direction = 'S'
+            elif self.direction == 'W':
+               self.direction = 'N'
+        self.data.append(self.direction)

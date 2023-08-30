@@ -37,6 +37,11 @@ class controlTest(unittest.TestCase):
         spaceCraft = chandrayaan(0, 0, 0, 'N')
         spaceCraft.turnLeft()
         self.assertEqual(spaceCraft.direction, 'W')
+    
+    def test_turnRight(self):
+        spaceCraft = chandrayaan(0, 0, 0, 'N')
+        spaceCraft.turnRight()
+        self.assertEqual(spaceCraft.direction, 'E')
 
 
 if __name__ == "__main__":
