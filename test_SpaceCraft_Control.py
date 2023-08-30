@@ -22,6 +22,12 @@ class controlTest(unittest.TestCase):
         spaceCraft = chandrayaan(0, 0, 0, 'N')
         spaceCraft.moveBackward()
         self.assertEqual((spaceCraft.x, spaceCraft.y, spaceCraft.z), (0, -1, 0))
+    
+    def test_turnUp(self):
+        spaceCraft = chandrayaan(0, 0, 0, 'N')
+        spaceCraft.turnUp()
+        self.assertEqual(spaceCraft.direction, 'U')
+
 
 if __name__ == "__main__":
     unittest.main()

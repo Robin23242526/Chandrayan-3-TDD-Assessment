@@ -33,3 +33,7 @@ class chandrayaan3:
             self.z -= 1
         elif self.direction == 'D':
             self.z += 1
+
+    def turnUp(self):
+            self.direction = 'U'
+            self.data.append(self.direction)
