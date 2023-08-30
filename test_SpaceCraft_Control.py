@@ -1,5 +1,5 @@
 import unittest
-from SpaceCraft_Control import chandrayaan3_controller as chandrayaan
+from SpaceCraft_Control import chandrayaan3 as chandrayaan
 
 class controlTest(unittest.TestCase):
     def setUp(self):
@@ -13,11 +13,10 @@ class controlTest(unittest.TestCase):
             self.assertIn(i,"fblrud")
         self.assertIsInstance(self.inputCommands,list)
 
-    def test_outputExists(self):
-        self.assertIsNotNone(chandrayaan.spacecraft_controller(self.inputCommands))
-
-    def test_outputType(self):
-        self.assertIsInstance(chandrayaan.spacecraft_controller(self.inputCommands),tuple)
+    def test_moveForward(self):
+        spaceCraft = chandrayaan(0, 0, 0, 'N')
+        spaceCraft.moveForward()
+        self.assertEqual((spaceCraft.x, spaceCraft.y, spaceCraft.z), (0, 1, 0))
 
 if __name__ == "__main__":
     unittest.main()
