@@ -37,3 +37,7 @@ class chandrayaan3:
     def turnUp(self):
             self.direction = 'U'
             self.data.append(self.direction)
+    
+    def turnDown(self):
+            self.direction = 'D'
+            self.data.append(self.direction)

@@ -28,6 +28,11 @@ class controlTest(unittest.TestCase):
         spaceCraft.turnUp()
         self.assertEqual(spaceCraft.direction, 'U')
 
+    def test_turnDown(self):
+        spaceCraft = chandrayaan(0, 0, 0, 'N')
+        spaceCraft.turnDown()
+        self.assertEqual(spaceCraft.direction, 'D')
+
 
 if __name__ == "__main__":
     unittest.main()
