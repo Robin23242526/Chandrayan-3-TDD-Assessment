@@ -101,7 +101,7 @@ class chandrayaan3:
         return self.x,self.y,self.z,self.direction
 
 spaceCraft = chandrayaan3(0, 0, 0, 'N')
-commands = ['f','r','u','b','l']
-x,y,z,direction = spaceCraft.spacecraft_controller(commands)
-print("final_position: ({0},{1},{2})".format(x,y,z))
-print("final direction: {0}".format(direction))
+input_commands = ['f','r','u','b','l']
+xPosition,yPosition,zPosition,current_direction = spaceCraft.spacecraft_controller(input_commands)
+print("final_position: ({0},{1},{2})".format(xPosition,yPosition,zPosition))
+print("final direction: {0}".format(current_direction))
