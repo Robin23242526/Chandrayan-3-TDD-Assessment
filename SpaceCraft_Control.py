@@ -83,3 +83,19 @@ class chandrayaan3:
             elif self.direction == 'W':
                self.direction = 'N'
         self.data.append(self.direction)
+    
+    def spacecraft_controller(self, commands):
+        for command in commands:
+            if command == 'f':
+                self.moveForward()
+            elif command == 'b':
+                self.moveBackward()
+            elif command == 'l':
+                self.turnLeft()
+            elif command == 'r':
+                self.turnRight()
+            elif command == 'u':
+                self.turnUp()
+            elif command == 'd':
+                self.turnDown()
+        return self.x,self.y,self.z,self.direction

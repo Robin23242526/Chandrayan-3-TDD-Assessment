@@ -43,6 +43,12 @@ class controlTest(unittest.TestCase):
         spaceCraft.turnRight()
         self.assertEqual(spaceCraft.direction, 'E')
 
+    def test_spacecraft_controller(self):
+        spaceCraft = chandrayaan(0, 0, 0, 'N')
+        commands = ['f', 'r', 'u', 'b', 'l']
+        x, y, z, direction = spaceCraft.spacecraft_controller(commands)
+        self.assertEqual((x, y, z), (0, 1, -1))
+        self.assertEqual(direction, 'N')
 
 if __name__ == "__main__":
     unittest.main()
