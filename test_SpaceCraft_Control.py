@@ -60,5 +60,13 @@ class controlTest(unittest.TestCase):
         spaceCraft.turnDown()
         self.assertEqual(spaceCraft.direction, 'D')
 
+     # Test turning left/right when facing U/D directions
+    def test_turnLeftRightInUDDirection(self):
+        spaceCraft = chandrayaan(0, 0, 0, 'U')
+        spaceCraft.turnLeft()
+        self.assertEqual(spaceCraft.direction, 'U')
+        spaceCraft.turnRight()
+        self.assertEqual(spaceCraft.direction, 'U')
+
 if __name__ == "__main__":
     unittest.main()

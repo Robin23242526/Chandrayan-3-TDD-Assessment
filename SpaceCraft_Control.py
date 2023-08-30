@@ -99,3 +99,9 @@ class chandrayaan3:
             elif command == 'd':
                 self.turnDown()
         return self.x,self.y,self.z,self.direction
+
+spaceCraft = chandrayaan3(0, 0, 0, 'N')
+commands = ['f','r','u','b','l']
+x,y,z,direction = spaceCraft.spacecraft_controller(commands)
+print("final_position: ({0},{1},{2})".format(x,y,z))
+print("final direction: {0}".format(direction))
