@@ -41,3 +41,24 @@ class chandrayaan3:
     def turnDown(self):
             self.direction = 'D'
             self.data.append(self.direction)
+    
+    def turnLeft(self):
+        if self.direction in ['U','D']:
+            if self.data[-2] == 'N':
+                self.direction = 'W'
+            elif self.data[-2] == 'S':
+               self.direction = 'E'
+            elif self.data[-2] == 'E':
+                self.direction = 'N'
+            elif self.data[-2] == 'W':
+               self.direction = 'S'
+        else:
+            if self.direction == 'N':
+                self.direction = 'W'
+            elif self.direction == 'S':
+               self.direction = 'E'
+            elif self.direction == 'E':
+                self.direction = 'N'
+            elif self.direction == 'W':
+               self.direction = 'S'
+        self.data.append(self.direction)
