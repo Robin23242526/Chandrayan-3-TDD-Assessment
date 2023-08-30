@@ -18,5 +18,10 @@ class controlTest(unittest.TestCase):
         spaceCraft.moveForward()
         self.assertEqual((spaceCraft.x, spaceCraft.y, spaceCraft.z), (0, 1, 0))
 
+    def test_moveBackward(self):
+        spaceCraft = chandrayaan(0, 0, 0, 'N')
+        spaceCraft.moveBackward()
+        self.assertEqual((spaceCraft.x, spaceCraft.y, spaceCraft.z), (0, -1, 0))
+
 if __name__ == "__main__":
     unittest.main()

@@ -19,3 +19,17 @@ class chandrayaan3:
             self.z += 1
         elif self.direction == 'D':
             self.z -= 1
+
+    def moveBackward(self):
+        if self.direction == 'E':
+            self.x -= 1
+        elif self.direction == 'W':
+            self.x += 1
+        elif self.direction == 'N':
+            self.y -= 1
+        elif self.direction == 'S':
+            self.y += 1
+        elif self.direction == 'U':
+            self.z -= 1
+        elif self.direction == 'D':
+            self.z += 1
